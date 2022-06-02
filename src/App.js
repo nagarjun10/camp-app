@@ -1,6 +1,4 @@
-import Amplify, { Auth } from 'aws-amplify';
-import awsconfig from './aws-exports';
-Amplify.configure(awsconfig);
+
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import { API } from 'aws-amplify';
@@ -8,6 +6,9 @@ import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 import { listNotes } from './graphql/queries';
 import { createNote as createNoteMutation, deleteNote as deleteNoteMutation } from './graphql/mutations';
 import { Storage } from 'aws-amplify';
+import Amplify, { Auth } from 'aws-amplify';
+import awsconfig from './aws-exports';
+Amplify.configure(awsconfig);
 
 const initialFormState = { name: '', description: '' }
 
