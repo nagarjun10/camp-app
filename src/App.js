@@ -48,6 +48,7 @@ function App() {
     const newNotesArray = notes.filter(note => note.id !== id);
     setNotes(newNotesArray);
     await API.graphql({ query: deleteNoteMutation, variables: { input: { id } }});
+  }
 
     async function onChange(e) {
       if (!e.target.files[0]) return
@@ -56,7 +57,7 @@ function App() {
       await Storage.put(file.name, file);
       fetchNotes();
     }
-  }
+  
 
   return (
     <div className="App">
