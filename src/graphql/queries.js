@@ -32,3 +32,34 @@ export const listNotes = /* GraphQL */ `
     }
   }
 `;
+export const getCamp = /* GraphQL */ `
+  query GetCamp($id: ID!) {
+    getCamp(id: $id) {
+      id
+      venue
+      date
+      image
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listCamps = /* GraphQL */ `
+  query ListCamps(
+    $filter: ModelCampFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listCamps(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        venue
+        date
+        image
+        createdAt
+        updatedAt
+      }
+      nextToken
+    }
+  }
+`;

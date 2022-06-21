@@ -8,3 +8,10 @@ type Note @model {
   description: String
   image: String
 }
+
+type Camp @model {
+  id: ID!
+  venue: String!
+  date: String
+  image: String
+}

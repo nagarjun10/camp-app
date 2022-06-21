@@ -37,3 +37,39 @@ export const onDeleteNote = /* GraphQL */ `
     }
   }
 `;
+export const onCreateCamp = /* GraphQL */ `
+  subscription OnCreateCamp {
+    onCreateCamp {
+      id
+      venue
+      date
+      image
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdateCamp = /* GraphQL */ `
+  subscription OnUpdateCamp {
+    onUpdateCamp {
+      id
+      venue
+      date
+      image
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteCamp = /* GraphQL */ `
+  subscription OnDeleteCamp {
+    onDeleteCamp {
+      id
+      venue
+      date
+      image
+      createdAt
+      updatedAt
+    }
+  }
+`;
